@@ -784,6 +784,80 @@ module Bitcoin
 
       }
     },
+
+    :zetacoin => {
+      :project => :zetacoin,
+      :magic_head => "\xFA\xB5\x03\xDF",
+      :address_version => "50",
+      :p2sh_version => "09",
+      :privkey_version => "e0",
+      :default_port => 17333,
+      :protocol_version => 70002,
+      :coinbase_maturity => 100,
+      :retarget_interval => 4, # time / spacing # 4 blocks
+      :retarget_time     => 120, # 2 minutes
+      :target_spacing    => 30, # block interval # 30 seconds
+      :max_money => 200_000_000 * COIN,
+      :min_tx_fee => 10_000,
+      :min_relay_tx_fee => 1_000,
+      :free_tx_bytes => 1_000,
+      :dust => CENT,
+      :per_dust_fee => false,
+      :dns_seeds => [
+        "seed1.zeta-coin.org",
+        "seed2.zeta-coin.org",
+        "seed3.zeta-coin.org",
+        "seed4.zeta-coin.org",
+        "albs1.zetacoinseed.com",
+        "albs2.zetacoinseed.com",
+        "albs3.zetacoinseed.com",
+        "albs4.zetacoinseed.com",
+      ],
+      :genesis_hash => "000006cab7aa2be2da91015902aa4458dd5fbb8778d175c36d429dc986f2bff4",
+      :proof_of_work_limit => 0x1e0fffff,
+      :alert_pubkeys => ["045337216002ca6a71d63edf062895417610a723d453e722bf4728996c58661cdac3d4dec5cecd449b9086e9602b35cc726a9e0163e1a4d40f521fbdaebb674658"],
+      :known_nodes => [],
+      :checkpoints => {
+        0 => "0x000006cab7aa2be2da91015902aa4458dd5fbb8778d175c36d429dc986f2bff4",
+        30350 => "0x000000000032d087f157871fbc41541a43ac30291f99ce5225d69fd132f8ecdf",
+        66438 => "0x00000000000970ae1d1fddcdf363dfc49505caa2884367ad460839d0621d1f56",
+        103010 => "0x000000000007204260b891b9aa8eb476132e74eb7539dc3e9ac2fb7bc7104ab8",
+        252509 => "0x0000000000090c2b77a3247303784289fb6a18752d54e38e96d2b48eac245016",
+        470201 => "0x00000000000102bdfdfc228ee34304f64650825fd1639a1f57a397af854b9df1",
+        523001 => "0x00000000000076412e07ded5bcdf11c0ea6bfcada9e339cb31d312d8e60c3ef8",
+        569410 => "0x000000000000085bbed51c9196314ee52281428ff5b1d8cade9140efe4b33381",
+        587317 => "0x000000000000b81d6626e9fd0c869764dd992d5429442876a75894e24c0c15e2",
+        636469 => "0x0000000000038394fe569fbd5a42484c69f15dae9f10982a7a7ed96bff4a359e",
+        720261 => "0x000000000005658b461195d927cf3347ebf8a36e987a2d2be26ed4fce0f75b13",
+        815426 => "0x000000000004958ee412205bc78e41061e3cb66b55cdd5230efceaaa07990f55",
+        870101 => "0x000000000006fcd0f5cff20c46d9da02f7835137bce0629431f1968c6d1dcab5",
+        978901 => "0x00000000000456f795ce33e9ad1757150c1b5155230e4438b3690004e00f7ede",
+        1272500 => "0x000000000001567d68a0197b43ec9c764d49a78cee9c318d58c5ae8d3a6a4a88",
+        1410098 => "0x000000000000ad1fe5f741c497aab1f4c9f2799ed2cce1c6715601e84c543368",
+        1538097 => "0x00000000000002f54303f5b45c1ec74c75f085034fe0438834bb6ed2cb2f78f1",
+      }
+    },
+
+    #:zetacoin_testnet => {
+    #  :project => :zetacoin,
+    #  :magic_head => "\xFA\xBF\xB5\xFE",
+    #  :address_version => "34",
+    #  :default_port => 18334,
+    #  :protocol_version => 35000,
+    #  :min_tx_fee => 50_000,
+    #  :min_relay_tx_fee => 10_000,
+    #  :free_tx_bytes => 1_000,
+    #  :dust => CENT,
+    #  :per_dust_fee => true,
+    #  :max_money => 21_000_000 * COIN,
+    #  :dns_seeds => [],
+    #  :genesis_hash => "00000001f8ab0d14bceaeb50d163b0bef15aecf62b87bd5f5c864d37f201db97",
+    #  :proof_of_work_limit => 0x1d00ffff,
+    #  :known_nodes => ["178.32.31.41"],
+    #  :checkpoints => {
+    #    0 => "000000000062b72c5e2ceb45fbc8587e807c155b0da735e6483dfba2f0a9c770",
+    #  }
+    #},
   }
 
 end
